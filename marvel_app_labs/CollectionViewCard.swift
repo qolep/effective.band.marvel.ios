@@ -1,4 +1,5 @@
 import UIKit
+import Kingfisher
 
 final class CollectionViewCard: UICollectionViewCell {
     private let imageView: UIImageView = {
@@ -19,7 +20,7 @@ final class CollectionViewCard: UICollectionViewCell {
         setUpLayout()
     }
     func setup(heroData: HeroModel) {
-        imageView.image = heroData.image ?? .init()
+        imageView.kf.setImage(with: heroData.ImageURL)
         heroName.text = heroData.name
     }
     private func setUpLayout() {

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F73873C2932709D00FD8C3B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0F73873B2932709D00FD8C3B /* Kingfisher */; };
+		0F7387462932820900FD8C3B /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7387452932820900FD8C3B /* DetailsViewController.swift */; };
+		0F73874829328AEA00FD8C3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F73874729328AEA00FD8C3B /* SceneDelegate.swift */; };
 		554AF2802901762E003CC67A /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 554AF27029017629003CC67A /* Roboto-Medium.ttf */; };
 		554AF2812901762E003CC67A /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 554AF27129017629003CC67A /* Roboto-BlackItalic.ttf */; };
 		554AF2822901762E003CC67A /* Roboto-Condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 554AF2722901762A003CC67A /* Roboto-Condensed.ttf */; };
@@ -31,6 +34,7 @@
 		55B9FF582900937F00F64053 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55B9FF572900937F00F64053 /* Assets.xcassets */; };
 		55B9FF5B2900937F00F64053 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55B9FF592900937F00F64053 /* LaunchScreen.storyboard */; };
 		55B9FF6C290098C100F64053 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B9FF6B290098C100F64053 /* ListViewController.swift */; };
+		8E1C6DA08444BE59AFDC9BE6 /* Pods_marvel_app_labs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1218D645320D3D9FAE51B365 /* Pods_marvel_app_labs.framework */; };
 		F7BDDA9D2906627400D4E7FE /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BDDA9C2906627400D4E7FE /* BackgroundColor.swift */; };
 		F7BDDA9F2906764400D4E7FE /* Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BDDA9E2906764400D4E7FE /* Static.swift */; };
 		F7BDDAA229068BD000D4E7FE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F7BDDAA129068BD000D4E7FE /* SnapKit */; };
@@ -50,6 +54,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0F7387452932820900FD8C3B /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		0F73874729328AEA00FD8C3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1218D645320D3D9FAE51B365 /* Pods_marvel_app_labs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_marvel_app_labs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E0DC8216A45DC4BEF38AE60 /* Pods-marvel_app_labs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvel_app_labs.debug.xcconfig"; path = "Target Support Files/Pods-marvel_app_labs/Pods-marvel_app_labs.debug.xcconfig"; sourceTree = "<group>"; };
 		554AF27029017629003CC67A /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		554AF27129017629003CC67A /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
 		554AF2722901762A003CC67A /* Roboto-Condensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Condensed.ttf"; sourceTree = "<group>"; };
@@ -76,6 +84,7 @@
 		55B9FF5A2900937F00F64053 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55B9FF5C2900937F00F64053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55B9FF6B290098C100F64053 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		96F023B76B0E79AA827AD53C /* Pods-marvel_app_labs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvel_app_labs.release.xcconfig"; path = "Target Support Files/Pods-marvel_app_labs/Pods-marvel_app_labs.release.xcconfig"; sourceTree = "<group>"; };
 		F7BDDA9C2906627400D4E7FE /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
 		F7BDDA9E2906764400D4E7FE /* Static.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Static.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,13 +94,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F73873C2932709D00FD8C3B /* Kingfisher in Frameworks */,
 				F7BDDAA229068BD000D4E7FE /* SnapKit in Frameworks */,
+				8E1C6DA08444BE59AFDC9BE6 /* Pods_marvel_app_labs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D0F6EF4ABF3A27423403596 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1218D645320D3D9FAE51B365 /* Pods_marvel_app_labs.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		554AF29029017639003CC67A /* font */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +139,8 @@
 			children = (
 				55B9FF4D2900937E00F64053 /* marvel_app_labs */,
 				55B9FF4C2900937E00F64053 /* Products */,
+				98388D9AAB2341BD6DC26D43 /* Pods */,
+				4D0F6EF4ABF3A27423403596 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,8 +167,19 @@
 				554AF29029017639003CC67A /* font */,
 				55B9FF592900937F00F64053 /* LaunchScreen.storyboard */,
 				55B9FF5C2900937F00F64053 /* Info.plist */,
+				0F7387452932820900FD8C3B /* DetailsViewController.swift */,
+				0F73874729328AEA00FD8C3B /* SceneDelegate.swift */,
 			);
 			path = marvel_app_labs;
+			sourceTree = "<group>";
+		};
+		98388D9AAB2341BD6DC26D43 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E0DC8216A45DC4BEF38AE60 /* Pods-marvel_app_labs.debug.xcconfig */,
+				96F023B76B0E79AA827AD53C /* Pods-marvel_app_labs.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,11 +189,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55B9FF5F2900937F00F64053 /* Build configuration list for PBXNativeTarget "marvel_app_labs" */;
 			buildPhases = (
+				70B986EE2A330E9B15312E72 /* [CP] Check Pods Manifest.lock */,
 				55B9FF472900937E00F64053 /* Sources */,
 				55B9FF482900937E00F64053 /* Frameworks */,
 				55B9FF492900937E00F64053 /* Resources */,
 				55B9FF6A2900969A00F64053 /* Embed Frameworks */,
 				0F9F674529271002003BE7C7 /* ShellScript */,
+				D3BE4272C29146FD9B4DF05A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,6 +204,7 @@
 			name = marvel_app_labs;
 			packageProductDependencies = (
 				F7BDDAA129068BD000D4E7FE /* SnapKit */,
+				0F73873B2932709D00FD8C3B /* Kingfisher */,
 			);
 			productName = marvel111;
 			productReference = 55B9FF4B2900937E00F64053 /* marvel_app_labs.app */;
@@ -201,6 +236,7 @@
 			mainGroup = 55B9FF422900937D00F64053;
 			packageReferences = (
 				F7BDDAA029068BD000D4E7FE /* XCRemoteSwiftPackageReference "SnapKit" */,
+				0F73873A2932709D00FD8C3B /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 55B9FF4C2900937E00F64053 /* Products */;
 			projectDirPath = "";
@@ -257,6 +293,45 @@
 			shellPath = /bin/sh;
 			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		70B986EE2A330E9B15312E72 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-marvel_app_labs-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3BE4272C29146FD9B4DF05A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-marvel_app_labs/Pods-marvel_app_labs-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-marvel_app_labs/Pods-marvel_app_labs-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-marvel_app_labs/Pods-marvel_app_labs-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -266,8 +341,10 @@
 			files = (
 				55B9FF4F2900937E00F64053 /* AppDelegate.swift in Sources */,
 				554AF2942901D931003CC67A /* CollectionViewCard.swift in Sources */,
+				0F7387462932820900FD8C3B /* DetailsViewController.swift in Sources */,
 				554AF292290179B2003CC67A /* PagingCollectionViewLayout.swift in Sources */,
 				F7BDDA9D2906627400D4E7FE /* BackgroundColor.swift in Sources */,
+				0F73874829328AEA00FD8C3B /* SceneDelegate.swift in Sources */,
 				554AF2982905A957003CC67A /* HeroList.swift in Sources */,
 				55B9FF6C290098C100F64053 /* ListViewController.swift in Sources */,
 				554AF2962905A828003CC67A /* HeroModel.swift in Sources */,
@@ -405,6 +482,7 @@
 		};
 		55B9FF602900937F00F64053 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E0DC8216A45DC4BEF38AE60 /* Pods-marvel_app_labs.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -439,6 +517,7 @@
 		};
 		55B9FF612900937F00F64053 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96F023B76B0E79AA827AD53C /* Pods-marvel_app_labs.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -495,6 +574,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0F73873A2932709D00FD8C3B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		F7BDDAA029068BD000D4E7FE /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -506,6 +593,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0F73873B2932709D00FD8C3B /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F73873A2932709D00FD8C3B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		F7BDDAA129068BD000D4E7FE /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F7BDDAA029068BD000D4E7FE /* XCRemoteSwiftPackageReference "SnapKit" */;

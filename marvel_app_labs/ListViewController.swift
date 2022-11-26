@@ -1,5 +1,6 @@
 import UIKit
 import SnapKit
+import Kingfisher
 
     class ListViewController: UIViewController {
     private let heroList = HeroList()
