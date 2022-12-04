@@ -13,7 +13,6 @@ struct HeroModel {
         self.description = description
     }
 }
-
 struct ImageUrl {
     static let spider_man = URL(string: """
            https://clck.ru/32vnV3Z

@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		0F73873C2932709D00FD8C3B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0F73873B2932709D00FD8C3B /* Kingfisher */; };
 		0F7387462932820900FD8C3B /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7387452932820900FD8C3B /* DetailsViewController.swift */; };
-		0F73874829328AEA00FD8C3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F73874729328AEA00FD8C3B /* SceneDelegate.swift */; };
-		0FA84B81293CCFDE0065E69F /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 0FA84B80293CCFDE0065E69F /* TinyConstraints */; };
+		0FA84B83293CE1740065E69F /* DetailsTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA84B82293CE1740065E69F /* DetailsTransfer.swift */; };
 		554AF2802901762E003CC67A /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 554AF27029017629003CC67A /* Roboto-Medium.ttf */; };
 		554AF2812901762E003CC67A /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 554AF27129017629003CC67A /* Roboto-BlackItalic.ttf */; };
 		554AF2822901762E003CC67A /* Roboto-Condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 554AF2722901762A003CC67A /* Roboto-Condensed.ttf */; };
@@ -37,7 +36,6 @@
 		55B9FF6C290098C100F64053 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B9FF6B290098C100F64053 /* ListViewController.swift */; };
 		ACA5EFDF2AAE5C65D2B889BD /* Pods_marvel_app_labs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9E4A9EB13F811998944D35D /* Pods_marvel_app_labs.framework */; };
 		F7BDDA9D2906627400D4E7FE /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BDDA9C2906627400D4E7FE /* BackgroundColor.swift */; };
-		F7BDDA9F2906764400D4E7FE /* Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BDDA9E2906764400D4E7FE /* Static.swift */; };
 		F7BDDAA229068BD000D4E7FE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F7BDDAA129068BD000D4E7FE /* SnapKit */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +54,7 @@
 
 /* Begin PBXFileReference section */
 		0F7387452932820900FD8C3B /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		0F73874729328AEA00FD8C3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0FA84B82293CE1740065E69F /* DetailsTransfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTransfer.swift; sourceTree = "<group>"; };
 		35649D0ECA469F4410335BDD /* Pods-marvel_app_labs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvel_app_labs.release.xcconfig"; path = "Target Support Files/Pods-marvel_app_labs/Pods-marvel_app_labs.release.xcconfig"; sourceTree = "<group>"; };
 		554AF27029017629003CC67A /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		554AF27129017629003CC67A /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
@@ -87,7 +85,6 @@
 		6019810F4474EC303FD8BCA0 /* Pods-marvel_app_labs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvel_app_labs.debug.xcconfig"; path = "Target Support Files/Pods-marvel_app_labs/Pods-marvel_app_labs.debug.xcconfig"; sourceTree = "<group>"; };
 		E9E4A9EB13F811998944D35D /* Pods_marvel_app_labs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_marvel_app_labs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7BDDA9C2906627400D4E7FE /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
-		F7BDDA9E2906764400D4E7FE /* Static.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Static.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +95,6 @@
 				0F73873C2932709D00FD8C3B /* Kingfisher in Frameworks */,
 				F7BDDAA229068BD000D4E7FE /* SnapKit in Frameworks */,
 				ACA5EFDF2AAE5C65D2B889BD /* Pods_marvel_app_labs.framework in Frameworks */,
-				0FA84B81293CCFDE0065E69F /* TinyConstraints in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,7 +157,6 @@
 				55B9FF4E2900937E00F64053 /* AppDelegate.swift */,
 				554AF2952905A828003CC67A /* HeroModel.swift */,
 				554AF2972905A957003CC67A /* HeroList.swift */,
-				F7BDDA9E2906764400D4E7FE /* Static.swift */,
 				55B9FF6B290098C100F64053 /* ListViewController.swift */,
 				554AF2932901D931003CC67A /* CollectionViewCard.swift */,
 				F7BDDA9C2906627400D4E7FE /* BackgroundColor.swift */,
@@ -171,7 +166,7 @@
 				55B9FF592900937F00F64053 /* LaunchScreen.storyboard */,
 				55B9FF5C2900937F00F64053 /* Info.plist */,
 				0F7387452932820900FD8C3B /* DetailsViewController.swift */,
-				0F73874729328AEA00FD8C3B /* SceneDelegate.swift */,
+				0FA84B82293CE1740065E69F /* DetailsTransfer.swift */,
 			);
 			path = marvel_app_labs;
 			sourceTree = "<group>";
@@ -207,7 +202,6 @@
 			packageProductDependencies = (
 				F7BDDAA129068BD000D4E7FE /* SnapKit */,
 				0F73873B2932709D00FD8C3B /* Kingfisher */,
-				0FA84B80293CCFDE0065E69F /* TinyConstraints */,
 			);
 			productName = marvel111;
 			productReference = 55B9FF4B2900937E00F64053 /* marvel_app_labs.app */;
@@ -240,7 +234,6 @@
 			packageReferences = (
 				F7BDDAA029068BD000D4E7FE /* XCRemoteSwiftPackageReference "SnapKit" */,
 				0F73873A2932709D00FD8C3B /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				0FA84B7F293CCFDE0065E69F /* XCRemoteSwiftPackageReference "TinyConstraints" */,
 			);
 			productRefGroup = 55B9FF4C2900937E00F64053 /* Products */;
 			projectDirPath = "";
@@ -348,11 +341,10 @@
 				0F7387462932820900FD8C3B /* DetailsViewController.swift in Sources */,
 				554AF292290179B2003CC67A /* PagingCollectionViewLayout.swift in Sources */,
 				F7BDDA9D2906627400D4E7FE /* BackgroundColor.swift in Sources */,
-				0F73874829328AEA00FD8C3B /* SceneDelegate.swift in Sources */,
 				554AF2982905A957003CC67A /* HeroList.swift in Sources */,
 				55B9FF6C290098C100F64053 /* ListViewController.swift in Sources */,
 				554AF2962905A828003CC67A /* HeroModel.swift in Sources */,
-				F7BDDA9F2906764400D4E7FE /* Static.swift in Sources */,
+				0FA84B83293CE1740065E69F /* DetailsTransfer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,14 +578,6 @@
 				minimumVersion = 7.0.0;
 			};
 		};
-		0FA84B7F293CCFDE0065E69F /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-			};
-		};
 		F7BDDAA029068BD000D4E7FE /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -609,11 +593,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0F73873A2932709D00FD8C3B /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
-		};
-		0FA84B80293CCFDE0065E69F /* TinyConstraints */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0FA84B7F293CCFDE0065E69F /* XCRemoteSwiftPackageReference "TinyConstraints" */;
-			productName = TinyConstraints;
 		};
 		F7BDDAA129068BD000D4E7FE /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
