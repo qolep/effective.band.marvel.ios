@@ -3,7 +3,7 @@ import UIKit
 struct HeroList {
     private let heroList = [
         HeroModel(name: "Black panther", imageURL: ImageUrl.black_panther!, color: .black, description: Description.black_panther_desc),
-        HeroModel(name: "Vision", imageURL: ImageUrl.vision! , color: .green, description: Description.vision_desc),
+        HeroModel(name: "Vision", imageURL: ImageUrl.vision!, color: .green, description: Description.vision_desc),
         HeroModel(name: "Deadpool", imageURL: ImageUrl.deadpool!, color: .red,
                   description: Description.deadpool_desc),
         HeroModel(name: "Thanos", imageURL: ImageUrl.thanos!, color: .purple, description: Description.thanos_desc),

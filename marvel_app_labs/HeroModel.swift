@@ -19,7 +19,7 @@ struct ImageUrl {
            https://clck.ru/32vnV3Z
            """)
     static let black_panther = URL(string: """
-           https://clck.ru/32nUVL
+           https://clck.ru/32qQoy
            """)
     static let vision = URL(string: """
                           https://clck.ru/32nUXJ
