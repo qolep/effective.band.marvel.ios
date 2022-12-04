@@ -19,8 +19,29 @@ final class CollectionViewCard: UICollectionViewCell {
         super.init(frame: frame)
         setUpLayout()
     }
-    func setup(heroData: HeroModel) {
-        imageView.kf.setImage(with: heroData.ImageURL)
+    /*func setup(heroData: HeroModel) {
+        imageView.image = heroData.image ?? .init()
+        heroName.text = heroData.name
+    }*/
+    func setup(heroData: HeroModel, and tag: Int) {
+        imageView.image = .init()
+        imageView.layoutIfNeeded()
+        let processor = DownsamplingImageProcessor(size: imageView.bounds.size)
+                     |> RoundCornerImageProcessor(cornerRadius: 20)
+        imageView.kf.setImage(
+            with: heroData.ImageURL ?? URL.init(string: ""),
+            options: [
+                .processor(processor)
+            ]
+        ) {
+            switch $0 {
+            case .success(let value):
+                NSLog("Task done for: \(value.source.url?.absoluteString ?? "")")
+            case .failure(let error):
+                NSLog("Job failed: \(error.localizedDescription)")
+            }
+        }
+        imageView.tag = tag
         heroName.text = heroData.name
     }
     private func setUpLayout() {

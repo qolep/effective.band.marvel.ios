@@ -3,10 +3,10 @@ import Foundation
 
 struct HeroModel {
     let name: String
-    let ImageURL: URL
+    let ImageURL: URL?
     let color: UIColor
     let description : String
-    init(name: String, imageURL: URL, color: UIColor, description: String) {
+    init(name: String, imageURL: URL?, color: UIColor, description: String) {
         self.name = name
         self.ImageURL = imageURL
         self.color = color
