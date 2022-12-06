@@ -23,11 +23,10 @@ final class ListViewController: UIViewController {
     }()
     private lazy var collectionView: UICollectionView = {
         let layout = PagingCollectionViewLayout()
-        layout.itemSize = CGSize(width: UIScreen.main.bounds.width - 100,
-                                height: UIScreen.main.bounds.height - 250)
-        layout.minimumLineSpacing = 30.0
+         layout.itemSize = Static.collectionViewCardItemSize
+        layout.minimumLineSpacing = Static.itemSpacing
+        layout.sectionInset = Static.collectionViewLayoutInset
         layout.scrollDirection = .horizontal
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 60, bottom: 0, right: 60)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.decelerationRate = .fast
         collectionView.backgroundColor = .none
@@ -74,6 +73,11 @@ final class ListViewController: UIViewController {
     }
 }
 extension ListViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    private enum Static{
+        static var collectionViewLayoutInset : UIEdgeInsets{UIEdgeInsets(top: 0, left: 60, bottom: 0, right: 60)}
+        static var itemSpacing: Double{40.0}
+        static var collectionViewCardItemSize: CGSize{CGSize(width: UIScreen.main.bounds.width - 100, height: UIScreen.main.bounds.height - 250)}
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return heroList.count()
     }

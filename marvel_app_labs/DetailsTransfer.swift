@@ -148,30 +148,30 @@ final class DetailsAnimationController: NSObject, UIViewControllerAnimatedTransi
         let finalCenter = view.center
         view.transform = CGAffineTransform(scaleX: anchorViewSize.width / finalSize.width,
                                            y: anchorViewSize.height / finalSize.height)
-        view.center = view.superview!.convert(anchorViewCenter, from: nil)
-        anchorView?.isHidden = true
-        return UIViewPropertyAnimator.runningPropertyAnimator(withDuration: transitionDuration(using: transitionContext),
-                                                              delay: 0, options: [.curveEaseInOut], animations: {
-            view.transform = .identity
-            view.center = finalCenter
-        }, completion: { _ in
-            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
-        })
-    }
+        view.center = view.superview?.convert(anchorViewCenter, from: nil) ?? .zero
+            anchorView?.isHidden = true
+            return UIViewPropertyAnimator.runningPropertyAnimator(withDuration: transitionDuration(using: transitionContext),
+                                                                  delay: 0, options: [.curveEaseInOut], animations: {
+                view.transform = .identity
+                view.center = finalCenter
+            }, completion: { _ in
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            })
+        }
     private func dismissAnimator(with transitionContext: UIViewControllerContextTransitioning,
                                  animating viewController: UIViewController) -> UIViewPropertyAnimator {
-        let view: UIView = viewController.view.viewWithTag(anchorViewTag) ?? viewController.view
-        let initialSize = view.bounds.size
-        let finalCenter = view.superview!.convert(anchorViewCenter, from: nil)
-        let finalTransform = CGAffineTransform(scaleX: self.anchorViewSize.width / initialSize.width,
-                                               y: self.anchorViewSize.height / initialSize.height)
-        return UIViewPropertyAnimator.runningPropertyAnimator(withDuration: transitionDuration(using: transitionContext),
-                                                              delay: 0, options: [.curveEaseInOut], animations: {
-            view.transform = finalTransform
-            view.center = finalCenter
-        }, completion: { _ in
-            self.anchorView?.isHidden = false
-            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
-        })
+            let view: UIView = viewController.view.viewWithTag(anchorViewTag) ?? viewController.view
+            let initialSize = view.bounds.size
+        let finalCenter = view.superview?.convert(anchorViewCenter, from: nil) ?? .zero
+            let finalTransform = CGAffineTransform(scaleX: self.anchorViewSize.width / initialSize.width,
+                                                   y: self.anchorViewSize.height / initialSize.height)
+            return UIViewPropertyAnimator.runningPropertyAnimator(withDuration: transitionDuration(using: transitionContext),
+                                                                  delay: 0, options: [.curveEaseInOut], animations: {
+                view.transform = finalTransform
+                view.center = finalCenter
+            }, completion: { _ in
+                self.anchorView?.isHidden = false
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            })
+        }
     }
-}
