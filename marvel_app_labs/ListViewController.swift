@@ -38,8 +38,7 @@ final class ListViewController: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = ""
-        navigationController?.navigationBar.tintColor = .white
+        navigationController?.setNavigationBarHidden(true, animated: false)
         view.addSubview(background)
         view.addSubview(logoImage)
         view.addSubview(titleTextLabel)

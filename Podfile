@@ -7,7 +7,6 @@ target 'marvel_app_labs' do
 
   # Pods for marvel_app_labs
  pod 'Kingfisher', '~> 7.0'
- pod 'TinyConstraints'
 
 
 end

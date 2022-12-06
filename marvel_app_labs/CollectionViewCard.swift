@@ -19,10 +19,6 @@ final class CollectionViewCard: UICollectionViewCell {
         super.init(frame: frame)
         setUpLayout()
     }
-    /*func setup(heroData: HeroModel) {
-        imageView.image = heroData.image ?? .init()
-        heroName.text = heroData.name
-    }*/
     func setup(heroData: HeroModel, and tag: Int) {
         imageView.image = .init()
         imageView.layoutIfNeeded()
