@@ -24,13 +24,15 @@ final class CollectionViewCard: UICollectionViewCell {
         imageView.layoutIfNeeded()
         let processor = DownsamplingImageProcessor(size: imageView.bounds.size)
                      |> RoundCornerImageProcessor(cornerRadius: 20)
-        imageView.kf.setImage(
-            with: heroData.ImageURL ?? URL.init(string: ""),
-            options: [
-                .processor(processor)
-            ]
-        ) {
-            switch $0 {
+        let resource = ImageResource(downloadURL: URL(string: heroData.ImageURL) ?? URL(string: "http://127.0.0.1")!, cacheKey: "\(heroData.heroId)")
+               imageView.kf.setImage(
+                   with: resource,
+                   placeholder: UIImage(named: "placeholder"),
+                   options: [
+                       .processor(processor),
+                       .cacheOriginalImage
+                   ]
+               ) {            switch $0 {
             case .success(let value):
                 NSLog("Task done for: \(value.source.url?.absoluteString ?? "")")
             case .failure(let error):

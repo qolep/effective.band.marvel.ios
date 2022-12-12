@@ -30,7 +30,6 @@
 		554AF292290179B2003CC67A /* PagingCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554AF291290179B2003CC67A /* PagingCollectionViewLayout.swift */; };
 		554AF2942901D931003CC67A /* CollectionViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554AF2932901D931003CC67A /* CollectionViewCard.swift */; };
 		554AF2962905A828003CC67A /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554AF2952905A828003CC67A /* HeroModel.swift */; };
-		554AF2982905A957003CC67A /* HeroList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554AF2972905A957003CC67A /* HeroList.swift */; };
 		55B9FF4F2900937E00F64053 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B9FF4E2900937E00F64053 /* AppDelegate.swift */; };
 		55B9FF582900937F00F64053 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55B9FF572900937F00F64053 /* Assets.xcassets */; };
 		55B9FF5B2900937F00F64053 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55B9FF592900937F00F64053 /* LaunchScreen.storyboard */; };
@@ -76,7 +75,6 @@
 		554AF291290179B2003CC67A /* PagingCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewLayout.swift; sourceTree = "<group>"; };
 		554AF2932901D931003CC67A /* CollectionViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCard.swift; sourceTree = "<group>"; };
 		554AF2952905A828003CC67A /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
-		554AF2972905A957003CC67A /* HeroList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroList.swift; sourceTree = "<group>"; };
 		55B9FF4B2900937E00F64053 /* marvel_app_labs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = marvel_app_labs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55B9FF4E2900937E00F64053 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55B9FF572900937F00F64053 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -158,7 +156,6 @@
 			children = (
 				55B9FF4E2900937E00F64053 /* AppDelegate.swift */,
 				554AF2952905A828003CC67A /* HeroModel.swift */,
-				554AF2972905A957003CC67A /* HeroList.swift */,
 				55B9FF6B290098C100F64053 /* ListViewController.swift */,
 				554AF2932901D931003CC67A /* CollectionViewCard.swift */,
 				F7BDDA9C2906627400D4E7FE /* BackgroundColor.swift */,
@@ -345,7 +342,6 @@
 				0F7387462932820900FD8C3B /* DetailsViewController.swift in Sources */,
 				554AF292290179B2003CC67A /* PagingCollectionViewLayout.swift in Sources */,
 				F7BDDA9D2906627400D4E7FE /* BackgroundColor.swift in Sources */,
-				554AF2982905A957003CC67A /* HeroList.swift in Sources */,
 				55B9FF6C290098C100F64053 /* ListViewController.swift in Sources */,
 				554AF2962905A828003CC67A /* HeroModel.swift in Sources */,
 				0FA84B83293CE1740065E69F /* DetailsTransfer.swift in Sources */,

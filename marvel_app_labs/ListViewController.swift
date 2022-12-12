@@ -2,11 +2,11 @@ import UIKit
 import SnapKit
 
 final class ListViewController: UIViewController {
-    private let heroList = HeroList()
     private let background = BackgroundColor(frame: .zero)
     private var currentSelectedItemIndex = 0
     private var detailsTransfer: DetailsTransferManager?
     private let detailsViewController = DetailsViewController()
+    private var offset: Int = 0
     private let logoImage: UIImageView = {
         let logo = UIImageView()
         logo.image = UIImage(named: "marvel_logo")
@@ -35,6 +35,14 @@ final class ListViewController: UIViewController {
         collectionView.delegate = self
         return collectionView
     }()
+    private lazy var heroesArray = [HeroModel](){
+        didSet {collectionView.reloadData()}
+    }
+    private lazy var getmoreHeroes: () -> Void = {
+        getHeroes(offset: self.offset){[weak self] in self?.heroesArray.append(contentsOf: $0)
+            self?.offset += $0.count
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: false)
@@ -43,7 +51,8 @@ final class ListViewController: UIViewController {
         view.addSubview(titleTextLabel)
         registerCollectionViewCards()
         view.addSubview(collectionView)
-        background.setTriangleColor(heroList.get(0).color)
+   //replace it.
+        background.setTriangleColor(.red)
         setLayout()
     }
     private func setLayout() {
@@ -79,7 +88,8 @@ extension ListViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         static var collectionViewCardItemSize: CGSize{CGSize(width: UIScreen.main.bounds.width - 100, height: UIScreen.main.bounds.height - 250)}
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return heroList.count()
+        if heroesArray.isEmpty{ getmoreHeroes() }
+        return heroesArray.count
     }
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -89,12 +99,12 @@ extension ListViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
             return .init()
         }
         let tag = indexPath.item + 1
-        cell.setup(heroData: heroList.get(indexPath.item), and: tag)
+        cell.setup(heroData: heroesArray[indexPath.item], and: tag)
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let tag = indexPath.row + 1
-        let heroData = heroList.get(indexPath.item)
+        let heroData = heroesArray[indexPath.item]
         let detailsTransfer = DetailsTransferManager(anchorViewTag: tag)
         detailsViewController.setup(heroData: heroData, tag: tag)
         detailsViewController.modalPresentationStyle = .custom
@@ -102,13 +112,18 @@ extension ListViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         present(detailsViewController, animated: true)
         self.detailsTransfer = detailsTransfer
     }
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+            if indexPath.row == heroesArray.count - 1 {
+                getmoreHeroes()
+            }
+        }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         guard scrollView is UICollectionView else { return }
         let centerPoint = CGPoint(x: scrollView.frame.size.width / 2 + scrollView.contentOffset.x,
                                   y: scrollView.frame.size.height / 2 + scrollView.contentOffset.y)
         if let indexPath = collectionView.indexPathForItem(at: centerPoint) {
             currentSelectedItemIndex = indexPath.row
-            background.setTriangleColor(heroList.get(indexPath.row).color)
+           //replace background.setTriangleColor(heroList.get(indexPath.row).color)
         }
     }
 }
