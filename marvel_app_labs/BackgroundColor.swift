@@ -1,5 +1,5 @@
 import UIKit
-//useless now. Will be reworked in lab4
+//useless now.
 final class BackgroundColor: UIImageView {
     private let backgroundImage = UIImage(named: "background") ?? .init()
     override init(frame: CGRect) {

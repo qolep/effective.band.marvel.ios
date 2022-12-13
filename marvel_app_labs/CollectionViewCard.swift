@@ -17,11 +17,13 @@ final class CollectionViewCard: UICollectionViewCell {
     }()
     override init(frame: CGRect) {
         super.init(frame: frame)
+        imageView.kf.indicatorType = .activity
         setUpLayout()
     }
-    func setup(heroData: HeroModel, and tag: Int) {
+    func setup(heroModel: HeroModel?, and tag: Int) {
         imageView.image = .init()
         imageView.layoutIfNeeded()
+        guard let heroData = heroModel else{return}
         let processor = DownsamplingImageProcessor(size: imageView.bounds.size)
                      |> RoundCornerImageProcessor(cornerRadius: 20)
         let resource = ImageResource(downloadURL: URL(string: heroData.ImageURL) ?? URL(string: "http://127.0.0.1")!, cacheKey: "\(heroData.heroId)")

@@ -5,8 +5,10 @@ target 'marvel_app_labs' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for marvel_app_labs
- pod 'Kingfisher', '~> 7.0'
-
+  # Pods for marvel_app_labs 
+ pod 'Kingfisher'
+ pod 'Alamofire'
+ pod 'SnapKit'
+ pod 'RealmSwift'
 
 end

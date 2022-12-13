@@ -6,6 +6,7 @@ final class DetailsTransferController: UIPresentationController{
             let button = UIButton(type: .system)
         button.setImage(UIImage(systemName: "xmark"), for:
             .normal)
+        button.addAction(UIAction(title: "Refresh") {[weak self] _ in self?.presentedViewController.dismiss(animated: true) }, for: .touchUpInside)
         button.addTarget(self, action: #selector(close), for: .primaryActionTriggered)
         closeButtonEffectView.contentView.addSubview(button)
             button.snp.makeConstraints { make in

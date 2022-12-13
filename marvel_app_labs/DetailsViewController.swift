@@ -3,6 +3,7 @@ import Kingfisher
 import SnapKit
 
 class DetailsViewController: UIViewController {
+    private let viewModel = DetailsViewModel()
     private let textOffset = 30
     private let wrapperView: UIView = {
         let view = UIView()
@@ -35,11 +36,15 @@ class DetailsViewController: UIViewController {
     }
     func setup(heroData: HeroModel, tag: Int) {
         heroImageView.image = .init()
+        heroDescriptionTextLabel.text = " "
+        heroNameTextLabel.text = " "
         wrapperView.tag = tag
-        getHeroes(id: heroData.heroId) { [weak self] in
-                    self?.heroImageView.kf.setImage(with: URL(string: $0.first?.ImageURL ?? "") ?? URL(string: "http://127.0.0.1"))
-                    self?.heroNameTextLabel.text = $0.first?.name
-                    self?.heroDescriptionTextLabel.text = $0.first?.description
+        viewModel.getHero(id: heroData.heroId) { [weak self] hero in
+            guard let self = self else { return }
+            guard let hero = hero else { return }
+            self.heroImageView.kf.setImage(with: URL(string: hero.ImageURL))
+            self.heroNameTextLabel.text = hero.name
+            self.heroDescriptionTextLabel.text = hero.description
                 }
         
     }
