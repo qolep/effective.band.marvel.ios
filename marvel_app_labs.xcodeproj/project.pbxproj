@@ -119,6 +119,85 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F5D5DA62949159900CAFFFB /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				55B9FF4E2900937E00F64053 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		0F5D5DA7294915E900CAFFFB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				55B9FF592900937F00F64053 /* LaunchScreen.storyboard */,
+				554AF29029017639003CC67A /* font */,
+				55B9FF572900937F00F64053 /* Assets.xcassets */,
+				55B9FF5C2900937F00F64053 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0F5D5DA8294916B100CAFFFB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0F5D5D962948260200CAFFFB /* Repository.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0F5D5DA9294916CC00CAFFFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F5D5DAA294916ED00CAFFFB /* Database */,
+				554AF2952905A828003CC67A /* HeroModel.swift */,
+				0F5D5D942947DE4600CAFFFB /* DbHeroModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0F5D5DAA294916ED00CAFFFB /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				0F5D5D9A29482F0800CAFFFB /* DbProtocol.swift */,
+				0F5D5D9829482E5E00CAFFFB /* DataManager.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		0F5D5DAB2949173900CAFFFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0F5D5DAD2949176B00CAFFFB /* MainView */,
+				0F5D5DAC2949174500CAFFFB /* DetailsView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0F5D5DAC2949174500CAFFFB /* DetailsView */ = {
+			isa = PBXGroup;
+			children = (
+				0F5D5D9E2948463300CAFFFB /* DetailsViewModel.swift */,
+				0FA84B82293CE1740065E69F /* DetailsTransfer.swift */,
+				0F7387452932820900FD8C3B /* DetailsViewController.swift */,
+			);
+			path = DetailsView;
+			sourceTree = "<group>";
+		};
+		0F5D5DAD2949176B00CAFFFB /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				0F5D5DA42948514000CAFFFB /* ListViewModelProtocol.swift */,
+				0F5D5DA22948508800CAFFFB /* ListViewViewModel.swift */,
+				0F5D5DA029484E4B00CAFFFB /* CardLoadingIndicator.swift */,
+				554AF291290179B2003CC67A /* PagingCollectionViewLayout.swift */,
+				554AF2932901D931003CC67A /* CollectionViewCard.swift */,
+				55B9FF6B290098C100F64053 /* ListViewController.swift */,
+				F7BDDA9C2906627400D4E7FE /* BackgroundColor.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
 		1FB39CE3B1E8B72E9D1A0D69 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,27 +251,12 @@
 		55B9FF4D2900937E00F64053 /* marvel_app_labs */ = {
 			isa = PBXGroup;
 			children = (
-				55B9FF4E2900937E00F64053 /* AppDelegate.swift */,
-				554AF2952905A828003CC67A /* HeroModel.swift */,
-				55B9FF6B290098C100F64053 /* ListViewController.swift */,
-				554AF2932901D931003CC67A /* CollectionViewCard.swift */,
-				F7BDDA9C2906627400D4E7FE /* BackgroundColor.swift */,
-				554AF291290179B2003CC67A /* PagingCollectionViewLayout.swift */,
-				55B9FF572900937F00F64053 /* Assets.xcassets */,
-				554AF29029017639003CC67A /* font */,
-				55B9FF592900937F00F64053 /* LaunchScreen.storyboard */,
-				55B9FF5C2900937F00F64053 /* Info.plist */,
-				0F7387452932820900FD8C3B /* DetailsViewController.swift */,
-				0FA84B82293CE1740065E69F /* DetailsTransfer.swift */,
-				0F5D5D942947DE4600CAFFFB /* DbHeroModel.swift */,
-				0F5D5D962948260200CAFFFB /* Repository.swift */,
-				0F5D5D9829482E5E00CAFFFB /* DataManager.swift */,
-				0F5D5D9A29482F0800CAFFFB /* DbProtocol.swift */,
+				0F5D5DAB2949173900CAFFFB /* View */,
+				0F5D5DA9294916CC00CAFFFB /* Model */,
+				0F5D5DA8294916B100CAFFFB /* Network */,
+				0F5D5DA7294915E900CAFFFB /* Resources */,
+				0F5D5DA62949159900CAFFFB /* Application */,
 				0F5D5D9C29483DA000CAFFFB /* AFExtension.swift */,
-				0F5D5D9E2948463300CAFFFB /* DetailsViewModel.swift */,
-				0F5D5DA029484E4B00CAFFFB /* CardLoadingIndicator.swift */,
-				0F5D5DA22948508800CAFFFB /* ListViewViewModel.swift */,
-				0F5D5DA42948514000CAFFFB /* ListViewModelProtocol.swift */,
 			);
 			path = marvel_app_labs;
 			sourceTree = "<group>";
@@ -526,7 +590,7 @@
 					"$(PROJECT_DIR)",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = marvel_app_labs/Info.plist;
+				INFOPLIST_FILE = marvel_app_labs/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -561,7 +625,7 @@
 					"$(PROJECT_DIR)",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = marvel_app_labs/Info.plist;
+				INFOPLIST_FILE = marvel_app_labs/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
