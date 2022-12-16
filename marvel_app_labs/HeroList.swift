@@ -2,14 +2,15 @@ import UIKit
 
 struct HeroList {
     private let heroList = [
-        HeroModel(name: "Black panther", image: UIImage(named: "black_panther"), color: .black),
-        HeroModel(name: "Vision", image: UIImage(named: "vision"), color: .green),
-        HeroModel(name: "Deadpool", image: UIImage(named: "deadpool"), color: .red),
-        HeroModel(name: "Thanos", image: UIImage(named: "thanos"), color: .purple),
-        HeroModel(name: "Iron Man", image: UIImage(named: "iron_man"), color: .yellow),
-        HeroModel(name: "Spider Man", image: UIImage(named: "spider_man"), color: .blue),
-        HeroModel(name: "Doctor Strange", image: UIImage(named: "dr_strange"), color: .purple),
-        HeroModel(name: "Thor", image: UIImage(named: "thor"),   color: .gray)
+        HeroModel(name: "Black panther", imageURL: ImageUrl.black_panther, color: .black, description: Description.black_panther_desc),
+        HeroModel(name: "Vision", imageURL: ImageUrl.vision, color: .green, description: Description.vision_desc),
+        HeroModel(name: "Deadpool", imageURL: ImageUrl.deadpool, color: .red,
+                  description: Description.deadpool_desc),
+        HeroModel(name: "Thanos", imageURL: ImageUrl.thanos, color: .purple, description: Description.thanos_desc),
+        HeroModel(name: "Iron Man", imageURL: ImageUrl.iron_man, color: .yellow, description: Description.iron_man_desc),
+        HeroModel(name: "Spider Man", imageURL: ImageUrl.spider_man, color: .blue, description: Description.spider_man_desc),
+        HeroModel(name: "Doctor Strange", imageURL: ImageUrl.dr, color: .purple, description: Description.dr_desc),
+        HeroModel(name: "Thor", imageURL: ImageUrl.thor,   color: .gray, description: Description.thor_desc)
     ]
     func get(_ index: Int) -> HeroModel {
         return heroList[index]
